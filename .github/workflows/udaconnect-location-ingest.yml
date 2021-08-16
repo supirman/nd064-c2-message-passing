@@ -1,13 +1,13 @@
-name: Udaconnect API - Package with Docker
+name: Udaconnect Location Ingest Service - Package with Docker
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the main branch
 on:
   push:
     branches: [ master ]
-    # Prevent trigger build by change on other location
-    paths:
-      - 'modules/api/**'
+#     # Prevent trigger build by change on other location
+#     paths:
+#       - 'modules/location_ingest/**'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -40,10 +40,10 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: ./modules/api/
-          file: ./modules/api/Dockerfile
+          context: ./modules/location_ingest/
+          file: ./modules/location_ingest/Dockerfile
           platforms: linux/amd64
           push: true
           tags: | 
-            supirman/udaconnect-api:latest
-            supirman/udaconnect-api:${{ steps.date.outputs.date }}
+            supirman/udaconnect-location-ingest:latest
+            supirman/udaconnect-location-ingest:${{ steps.date.outputs.date }}

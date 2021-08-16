@@ -1,6 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-default_box = "generic/opensuse42"
+default_box = "opensuse/Leap-15.3.x86_64"
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
@@ -28,11 +28,15 @@ Vagrant.configure("2") do |config|
       v.memory = "3072"
       v.name = "master"
       end
+    master.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__exclude: ".git/"
     master.vm.provision "shell", inline: <<-SHELL
       sudo zypper refresh
+      sudo zypper --non-interactive install apparmor-parser
       sudo zypper --non-interactive install bzip2
       sudo zypper --non-interactive install etcd
       curl -sfL https://get.k3s.io | sh -
+      curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+      helm repo add bitnami https://charts.bitnami.com/bitnami
     SHELL
   end
 

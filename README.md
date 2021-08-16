@@ -76,12 +76,15 @@ Type `exit` to exit the virtual OS and you will find yourself back in your compu
 Afterwards, you can test that `kubectl` works by running a command like `kubectl describe services`. It should not return any errors.
 
 ### Steps
-1. `kubectl apply -f deployment/db-configmap.yaml` - Set up environment variables for the pods
-2. `kubectl apply -f deployment/db-secret.yaml` - Set up secrets for the pods
-3. `kubectl apply -f deployment/postgres.yaml` - Set up a Postgres database running PostGIS
-4. `kubectl apply -f deployment/udaconnect-api.yaml` - Set up the service and deployment for the API
-5. `kubectl apply -f deployment/udaconnect-app.yaml` - Set up the service and deployment for the web app
-6. `sh scripts/run_db_command.sh <POD_NAME>` - Seed your database against the `postgres` pod. (`kubectl get pods` will give you the `POD_NAME`)
+1. `curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash` - Install Helm
+2. `helm repo add bitnami https://charts.bitnami.com/bitnami` - Add bitnami repo for helm
+3. `helm install udaconnect-kafka bitnami/kafka` or  `kubectl apply -f deployment/udaconnect-kafka.yaml` - Install bitnami/kafka deployment with kafka
+4. `kubectl apply -f deployment/db-configmap.yaml` - Set up environment variables for the pods
+5. `kubectl apply -f deployment/db-secret.yaml` - Set up secrets for the pods
+6. `kubectl apply -f deployment/postgres.yaml` - Set up a Postgres database running PostGIS
+7. `kubectl apply -f deployment/udaconnect-api.yaml` - Set up the service and deployment for the API
+8. `kubectl apply -f deployment/udaconnect-app.yaml` - Set up the service and deployment for the web app
+9. `sh scripts/run_db_command.sh <POD_NAME>` - Seed your database against the `postgres` pod. (`kubectl get pods` will give you the `POD_NAME`)
 
 Manually applying each of the individual `yaml` files is cumbersome but going through each step provides some context on the content of the starter project. In practice, we would have reduced the number of steps by running the command against a directory to apply of the contents: `kubectl apply -f deployment/`.
 
