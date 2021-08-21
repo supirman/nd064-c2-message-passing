@@ -1,6 +1,7 @@
 from kafka import KafkaConsumer
 import requests
 import logging
+import json
 
 logger = logging.getLogger("udaconnect-api")
 
@@ -10,5 +11,5 @@ LOCATION_SERVICE="http://udaconnect-location:5000"
 
 consumer = KafkaConsumer(TOPIC_NAME, bootstrap_servers=BOOTSTRAP_SERVER, group_id=TOPIC_NAME)
 for message in consumer:
-    r = requests.post(LOCATION_SERVICE+"/api/locations", json=message)
+    r = requests.post(LOCATION_SERVICE+"/api/locations", json=json.loads(message.value))
     logger.info(r.json())
