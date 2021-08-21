@@ -1,0 +1,19 @@
+# UdaConnect Architecture Decisions
+
+Three message passing type used this project, they are: 
+
+## Kafka Message Queue
+As the project require to be able to handle large data volume ingestion, 
+I use Kafka Message Queue for Location data which will have a lot data incoming from the converence ground.
+Kafka will help to queue the location message before the Location data consumed by Location Consumer service.
+
+## gRPC
+I am assume that the location will come from embeded computer in converence or attendee mobile app.
+To help make sure the data has proper format before come to the message queue, I use gRPC as front interface of Location Ingest service.
+Then the data will be passed to Kafka message queue. 
+
+## REST
+As we want migrate the monolith API into microservice, 
+I think it is wise to use REST since it will give faster result on the MVP development in the limited timeline. 
+It will also minimize the change for the frontend web app.
+I use REST message queue for the original splited service: Location service, Person service, and Connection service.

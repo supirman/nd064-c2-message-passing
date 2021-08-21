@@ -1,0 +1,581 @@
+{
+	"info": {
+		"_postman_id": "9e68a5e3-9548-4a0c-a911-22cb4c740998",
+		"name": "Udaconnect API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/locations",
+			"item": [
+				{
+					"name": "post locations resource",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{locationBaseURL}}/api/locations",
+							"host": [
+								"{{locationBaseURL}}"
+							],
+							"path": [
+								"api",
+								"locations"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/locations",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"locations"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "get location data connection resource",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{locationBaseURL}}/api/locations/connection/:person_id?distance=5&end_date=2020-12-01&start_date=2020-01-01",
+							"host": [
+								"{{locationBaseURL}}"
+							],
+							"path": [
+								"api",
+								"locations",
+								"connection",
+								":person_id"
+							],
+							"query": [
+								{
+									"key": "distance",
+									"value": "5",
+									"description": "Proximity to a given user in meters"
+								},
+								{
+									"key": "end_date",
+									"value": "2020-12-01",
+									"description": "Upper bound of date range"
+								},
+								{
+									"key": "start_date",
+									"value": "2020-01-01",
+									"description": "Lower bound of date range"
+								}
+							],
+							"variable": [
+								{
+									"key": "person_id",
+									"value": "6",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{locationBaseURL}}/api/locations/connection/:person_id?distance=5&end_date=2020-12-01&start_date=2020-01-01",
+									"host": [
+										"{{locationBaseURL}}"
+									],
+									"path": [
+										"api",
+										"locations",
+										"connection",
+										":person_id"
+									],
+									"query": [
+										{
+											"key": "distance",
+											"value": "5",
+											"description": "Proximity to a given user in meters"
+										},
+										{
+											"key": "end_date",
+											"value": "2020-12-01",
+											"description": "Upper bound of date range"
+										},
+										{
+											"key": "start_date",
+											"value": "2020-01-01",
+											"description": "Lower bound of date range"
+										}
+									],
+									"variable": [
+										{
+											"key": "person_id",
+											"value": "6",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "11509"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/0.16.1 Python/3.7.11"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Aug 2021 16:46:27 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-08-15T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 5,\n        \"id\": 30\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 36\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 37\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 38\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 39\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 40\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 41\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 5,\n        \"id\": 57\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 9,\n        \"id\": 65\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 5,\n        \"id\": 66\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 8,\n        \"id\": 67\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"-106.5719566\",\n        \"person_id\": 9,\n        \"id\": 53\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"-106.5719566\",\n        \"person_id\": 8,\n        \"id\": 58\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"-106.5719566\",\n        \"person_id\": 8,\n        \"id\": 59\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-06T10:37:06\",\n        \"longitude\": \"-106.5719566\",\n        \"person_id\": 8,\n        \"id\": 60\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-05T10:37:06\",\n        \"longitude\": \"-106.5719561\",\n        \"person_id\": 8,\n        \"id\": 61\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-01-05T10:37:06\",\n        \"longitude\": \"-106.5719521\",\n        \"person_id\": 8,\n        \"id\": 62\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-01-05T10:37:06\",\n        \"longitude\": \"-106.5719521\",\n        \"person_id\": 5,\n        \"id\": 63\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"-106.5719566\",\n        \"person_id\": 9,\n        \"id\": 53\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"-106.5719566\",\n        \"person_id\": 8,\n        \"id\": 58\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"-106.5719566\",\n        \"person_id\": 8,\n        \"id\": 59\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-06T10:37:06\",\n        \"longitude\": \"-106.5719566\",\n        \"person_id\": 8,\n        \"id\": 60\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-05T10:37:06\",\n        \"longitude\": \"-106.5719561\",\n        \"person_id\": 8,\n        \"id\": 61\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-01-05T10:37:06\",\n        \"longitude\": \"-106.5719521\",\n        \"person_id\": 8,\n        \"id\": 62\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-01-05T10:37:06\",\n        \"longitude\": \"-106.5719521\",\n        \"person_id\": 5,\n        \"id\": 63\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"-106.5719566\",\n        \"person_id\": 9,\n        \"id\": 53\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"-106.5719566\",\n        \"person_id\": 8,\n        \"id\": 58\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"-106.5719566\",\n        \"person_id\": 8,\n        \"id\": 59\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-06T10:37:06\",\n        \"longitude\": \"-106.5719566\",\n        \"person_id\": 8,\n        \"id\": 60\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-05T10:37:06\",\n        \"longitude\": \"-106.5719561\",\n        \"person_id\": 8,\n        \"id\": 61\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-01-05T10:37:06\",\n        \"longitude\": \"-106.5719521\",\n        \"person_id\": 8,\n        \"id\": 62\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-01-05T10:37:06\",\n        \"longitude\": \"-106.5719521\",\n        \"person_id\": 5,\n        \"id\": 63\n    },\n    {\n        \"latitude\": \"35.058564\",\n        \"creation_time\": \"2020-07-07T10:38:06\",\n        \"longitude\": \"-106.5721845\",\n        \"person_id\": 8,\n        \"id\": 49\n    },\n    {\n        \"latitude\": \"35.058564\",\n        \"creation_time\": \"2020-07-07T10:38:06\",\n        \"longitude\": \"-106.5721846\",\n        \"person_id\": 8,\n        \"id\": 50\n    },\n    {\n        \"latitude\": \"35.058564\",\n        \"creation_time\": \"2020-07-01T10:38:06\",\n        \"longitude\": \"-106.5721846\",\n        \"person_id\": 8,\n        \"id\": 51\n    },\n    {\n        \"latitude\": \"35.058564\",\n        \"creation_time\": \"2020-07-01T10:38:06\",\n        \"longitude\": \"-106.5721846\",\n        \"person_id\": 9,\n        \"id\": 52\n    },\n    {\n        \"latitude\": \"35.058564\",\n        \"creation_time\": \"2020-07-07T10:38:06\",\n        \"longitude\": \"-106.5721845\",\n        \"person_id\": 8,\n        \"id\": 49\n    },\n    {\n        \"latitude\": \"35.058564\",\n        \"creation_time\": \"2020-07-07T10:38:06\",\n        \"longitude\": \"-106.5721846\",\n        \"person_id\": 8,\n        \"id\": 50\n    },\n    {\n        \"latitude\": \"35.058564\",\n        \"creation_time\": \"2020-07-01T10:38:06\",\n        \"longitude\": \"-106.5721846\",\n        \"person_id\": 8,\n        \"id\": 51\n    },\n    {\n        \"latitude\": \"35.058564\",\n        \"creation_time\": \"2020-07-01T10:38:06\",\n        \"longitude\": \"-106.5721846\",\n        \"person_id\": 9,\n        \"id\": 52\n    },\n    {\n        \"latitude\": \"35.058564\",\n        \"creation_time\": \"2020-07-07T10:38:06\",\n        \"longitude\": \"-106.5721845\",\n        \"person_id\": 8,\n        \"id\": 49\n    },\n    {\n        \"latitude\": \"35.058564\",\n        \"creation_time\": \"2020-07-07T10:38:06\",\n        \"longitude\": \"-106.5721846\",\n        \"person_id\": 8,\n        \"id\": 50\n    },\n    {\n        \"latitude\": \"35.058564\",\n        \"creation_time\": \"2020-07-01T10:38:06\",\n        \"longitude\": \"-106.5721846\",\n        \"person_id\": 8,\n        \"id\": 51\n    },\n    {\n        \"latitude\": \"35.058564\",\n        \"creation_time\": \"2020-07-01T10:38:06\",\n        \"longitude\": \"-106.5721846\",\n        \"person_id\": 9,\n        \"id\": 52\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"-106.5719566\",\n        \"person_id\": 9,\n        \"id\": 53\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"-106.5719566\",\n        \"person_id\": 8,\n        \"id\": 58\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"-106.5719566\",\n        \"person_id\": 8,\n        \"id\": 59\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-06T10:37:06\",\n        \"longitude\": \"-106.5719566\",\n        \"person_id\": 8,\n        \"id\": 60\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-07-05T10:37:06\",\n        \"longitude\": \"-106.5719561\",\n        \"person_id\": 8,\n        \"id\": 61\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-01-05T10:37:06\",\n        \"longitude\": \"-106.5719521\",\n        \"person_id\": 8,\n        \"id\": 62\n    },\n    {\n        \"latitude\": \"35.0585136\",\n        \"creation_time\": \"2020-01-05T10:37:06\",\n        \"longitude\": \"-106.5719521\",\n        \"person_id\": 5,\n        \"id\": 63\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-08-15T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 5,\n        \"id\": 30\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 36\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 37\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 38\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 39\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 40\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 41\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 5,\n        \"id\": 57\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 9,\n        \"id\": 65\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 5,\n        \"id\": 66\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 8,\n        \"id\": 67\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-08-15T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 5,\n        \"id\": 30\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 36\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 37\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 38\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 39\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 40\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 41\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 5,\n        \"id\": 57\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 9,\n        \"id\": 65\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 5,\n        \"id\": 66\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 8,\n        \"id\": 67\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-08-15T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 5,\n        \"id\": 30\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 36\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 37\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 38\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 39\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 40\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 41\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 5,\n        \"id\": 57\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 9,\n        \"id\": 65\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 5,\n        \"id\": 66\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 8,\n        \"id\": 67\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-08-15T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 5,\n        \"id\": 30\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 36\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 37\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 38\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 39\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 40\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 1,\n        \"id\": 41\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 5,\n        \"id\": 57\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 9,\n        \"id\": 65\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 5,\n        \"id\": 66\n    },\n    {\n        \"latitude\": \"-122.290883\",\n        \"creation_time\": \"2020-07-07T10:37:06\",\n        \"longitude\": \"37.55363\",\n        \"person_id\": 8,\n        \"id\": 67\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get location resource",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{locationBaseURL}}/api/locations/:location_id",
+							"host": [
+								"{{locationBaseURL}}"
+							],
+							"path": [
+								"api",
+								"locations",
+								":location_id"
+							],
+							"variable": [
+								{
+									"key": "location_id",
+									"value": "34",
+									"description": "(Required) Unique ID for a given Location"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/locations/:location_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"locations",
+										":location_id"
+									],
+									"variable": [
+										{
+											"key": "location_id",
+											"value": "34",
+											"description": "(Required) Unique ID for a given Location"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "119"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/0.16.1 Python/3.7.11"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Aug 2021 14:55:44 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"creation_time\": \"2020-07-07T10:37:06\",\n    \"person_id\": 6,\n    \"id\": 34,\n    \"longitude\": \"37.55363\",\n    \"latitude\": \"-122.290883\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "api/persons",
+			"item": [
+				{
+					"name": "post persons resource",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{personBaseURL}}/api/persons",
+							"host": [
+								"{{personBaseURL}}"
+							],
+							"path": [
+								"api",
+								"persons"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/persons",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "get persons resource",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{personBaseURL}}/api/persons",
+							"host": [
+								"{{personBaseURL}}"
+							],
+							"path": [
+								"api",
+								"persons"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/persons?person_id=5",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"persons"
+									],
+									"query": [
+										{
+											"key": "person_id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "get person resource",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{personBaseURL}}/api/persons/:person_id",
+							"host": [
+								"{{personBaseURL}}"
+							],
+							"path": [
+								"api",
+								"persons",
+								":person_id"
+							],
+							"variable": [
+								{
+									"key": "person_id",
+									"value": "6",
+									"description": "(Required) Unique ID for a given Person"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{personBaseURL}}/api/persons/:person_id",
+									"host": [
+										"{{personBaseURL}}"
+									],
+									"path": [
+										"api",
+										"persons",
+										":person_id"
+									],
+									"variable": [
+										{
+											"key": "person_id",
+											"value": "6",
+											"description": "(Required) Unique ID for a given Person"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "80"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/0.16.1 Python/3.7.11"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Aug 2021 16:44:01 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 6,\n    \"company_name\": \"USDA\",\n    \"last_name\": \"Shader\",\n    \"first_name\": \"Frank\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "get connection data resource",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:30004/api/persons/:person_id/connection?distance=5&end_date=2020-12-01&start_date=2020-01-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30004",
+					"path": [
+						"api",
+						"persons",
+						":person_id",
+						"connection"
+					],
+					"query": [
+						{
+							"key": "distance",
+							"value": "5",
+							"description": "Proximity to a given user in meters"
+						},
+						{
+							"key": "end_date",
+							"value": "2020-12-01",
+							"description": "Upper bound of date range"
+						},
+						{
+							"key": "start_date",
+							"value": "2020-01-01",
+							"description": "Lower bound of date range"
+						}
+					],
+					"variable": [
+						{
+							"key": "person_id",
+							"value": "5",
+							"description": "(Required) "
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:30004/api/persons/:person_id/connection?distance=5&end_date=2020-12-01&start_date=2020-01-01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "30004",
+							"path": [
+								"api",
+								"persons",
+								":person_id",
+								"connection"
+							],
+							"query": [
+								{
+									"key": "distance",
+									"value": "5",
+									"description": "Proximity to a given user in meters"
+								},
+								{
+									"key": "end_date",
+									"value": "2020-12-01",
+									"description": "Upper bound of date range"
+								},
+								{
+									"key": "start_date",
+									"value": "2020-01-01",
+									"description": "Lower bound of date range"
+								}
+							],
+							"variable": [
+								{
+									"key": "person_id",
+									"value": "5",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "12460"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/0.16.1 Python/3.7.11"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 21 Aug 2021 16:42:59 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 34,\n            \"person_id\": 6,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 36,\n            \"person_id\": 1,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 37,\n            \"person_id\": 1,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 38,\n            \"person_id\": 1,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 39,\n            \"person_id\": 1,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 40,\n            \"person_id\": 1,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 41,\n            \"person_id\": 1,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 65,\n            \"person_id\": 9,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 9,\n            \"company_name\": \"The Chicken Sisters Restaurant\",\n            \"first_name\": \"Otto\",\n            \"last_name\": \"Spring\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 67,\n            \"person_id\": 8,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 8,\n            \"company_name\": \"Paul Badman & Associates\",\n            \"first_name\": \"Paul\",\n            \"last_name\": \"Badman\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-08-15T10:37:06\",\n            \"id\": 68,\n            \"person_id\": 6,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 1,\n            \"person_id\": 6,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 2,\n            \"person_id\": 6,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 3,\n            \"person_id\": 6,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290524\",\n            \"creation_time\": \"2020-08-18T10:37:06\",\n            \"id\": 29,\n            \"person_id\": 1,\n            \"longitude\": \"37.553441\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290521\",\n            \"creation_time\": \"2020-08-15T10:37:06\",\n            \"id\": 32,\n            \"person_id\": 1,\n            \"longitude\": \"37.553441\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290521\",\n            \"creation_time\": \"2020-08-19T10:37:06\",\n            \"id\": 33,\n            \"person_id\": 1,\n            \"longitude\": \"37.553451\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 34,\n            \"person_id\": 6,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 36,\n            \"person_id\": 1,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 37,\n            \"person_id\": 1,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 38,\n            \"person_id\": 1,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 39,\n            \"person_id\": 1,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 40,\n            \"person_id\": 1,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 41,\n            \"person_id\": 1,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 65,\n            \"person_id\": 9,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 9,\n            \"company_name\": \"The Chicken Sisters Restaurant\",\n            \"first_name\": \"Otto\",\n            \"last_name\": \"Spring\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 67,\n            \"person_id\": 8,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 8,\n            \"company_name\": \"Paul Badman & Associates\",\n            \"first_name\": \"Paul\",\n            \"last_name\": \"Badman\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-08-15T10:37:06\",\n            \"id\": 68,\n            \"person_id\": 6,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 1,\n            \"person_id\": 6,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 2,\n            \"person_id\": 6,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 3,\n            \"person_id\": 6,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"35.0585136\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 42,\n            \"person_id\": 6,\n            \"longitude\": \"-106.5719566\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"35.0585136\",\n            \"creation_time\": \"2020-07-06T10:37:06\",\n            \"id\": 43,\n            \"person_id\": 6,\n            \"longitude\": \"-106.5719566\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"35.0585136\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 44,\n            \"person_id\": 6,\n            \"longitude\": \"-106.5719566\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"35.0585136\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 53,\n            \"person_id\": 9,\n            \"longitude\": \"-106.5719566\"\n        },\n        \"person\": {\n            \"id\": 9,\n            \"company_name\": \"The Chicken Sisters Restaurant\",\n            \"first_name\": \"Otto\",\n            \"last_name\": \"Spring\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"35.0585136\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 58,\n            \"person_id\": 8,\n            \"longitude\": \"-106.5719566\"\n        },\n        \"person\": {\n            \"id\": 8,\n            \"company_name\": \"Paul Badman & Associates\",\n            \"first_name\": \"Paul\",\n            \"last_name\": \"Badman\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"35.0585136\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 59,\n            \"person_id\": 8,\n            \"longitude\": \"-106.5719566\"\n        },\n        \"person\": {\n            \"id\": 8,\n            \"company_name\": \"Paul Badman & Associates\",\n            \"first_name\": \"Paul\",\n            \"last_name\": \"Badman\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"35.0585136\",\n            \"creation_time\": \"2020-07-06T10:37:06\",\n            \"id\": 60,\n            \"person_id\": 8,\n            \"longitude\": \"-106.5719566\"\n        },\n        \"person\": {\n            \"id\": 8,\n            \"company_name\": \"Paul Badman & Associates\",\n            \"first_name\": \"Paul\",\n            \"last_name\": \"Badman\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"35.0585136\",\n            \"creation_time\": \"2020-07-05T10:37:06\",\n            \"id\": 61,\n            \"person_id\": 8,\n            \"longitude\": \"-106.5719561\"\n        },\n        \"person\": {\n            \"id\": 8,\n            \"company_name\": \"Paul Badman & Associates\",\n            \"first_name\": \"Paul\",\n            \"last_name\": \"Badman\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"35.0585136\",\n            \"creation_time\": \"2020-01-05T10:37:06\",\n            \"id\": 62,\n            \"person_id\": 8,\n            \"longitude\": \"-106.5719521\"\n        },\n        \"person\": {\n            \"id\": 8,\n            \"company_name\": \"Paul Badman & Associates\",\n            \"first_name\": \"Paul\",\n            \"last_name\": \"Badman\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"35.0585136\",\n            \"creation_time\": \"2020-01-05T10:37:06\",\n            \"id\": 64,\n            \"person_id\": 6,\n            \"longitude\": \"-106.5719521\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 34,\n            \"person_id\": 6,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 36,\n            \"person_id\": 1,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 37,\n            \"person_id\": 1,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 38,\n            \"person_id\": 1,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 39,\n            \"person_id\": 1,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 40,\n            \"person_id\": 1,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 41,\n            \"person_id\": 1,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 1,\n            \"company_name\": \"Hampton, Hampton and McQuill\",\n            \"first_name\": \"Pam\",\n            \"last_name\": \"Trexler\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 65,\n            \"person_id\": 9,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 9,\n            \"company_name\": \"The Chicken Sisters Restaurant\",\n            \"first_name\": \"Otto\",\n            \"last_name\": \"Spring\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 67,\n            \"person_id\": 8,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 8,\n            \"company_name\": \"Paul Badman & Associates\",\n            \"first_name\": \"Paul\",\n            \"last_name\": \"Badman\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-08-15T10:37:06\",\n            \"id\": 68,\n            \"person_id\": 6,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 1,\n            \"person_id\": 6,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 2,\n            \"person_id\": 6,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    },\n    {\n        \"location\": {\n            \"latitude\": \"-122.290883\",\n            \"creation_time\": \"2020-07-07T10:37:06\",\n            \"id\": 3,\n            \"person_id\": 6,\n            \"longitude\": \"37.55363\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"company_name\": \"USDA\",\n            \"first_name\": \"Frank\",\n            \"last_name\": \"Shader\"\n        }\n    }\n]"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "locationBaseURL",
+			"value": "http://localhost:30002"
+		},
+		{
+			"key": "personBaseURL",
+			"value": "http://localhost:30003"
+		},
+		{
+			"key": "connectionBaseUrl",
+			"value": "http://localhost:30004"
+		}
+	]
+}
