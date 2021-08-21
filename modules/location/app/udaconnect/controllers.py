@@ -2,7 +2,7 @@ from datetime import datetime
 
 from app.udaconnect.models import Location
 from app.udaconnect.schemas import LocationSchema
-from app.udaconnect.services import LocationService
+from app.udaconnect.services import LocationService, LocationConnectionService
 from flask import request
 from flask_accepts import accepts, responds
 from flask_restx import Namespace, Resource
@@ -17,9 +17,7 @@ api = Namespace("UdaConnect", description="Connections via geolocation.")  # noq
 
 
 @api.route("/locations")
-@api.route("/locations/<location_id>")
-@api.param("location_id", "Unique ID for a given Location", _in="query")
-class LocationResource(Resource):
+class LocationsResource(Resource):
     @accepts(schema=LocationSchema)
     @responds(schema=LocationSchema)
     def post(self) -> Location:
@@ -27,9 +25,33 @@ class LocationResource(Resource):
         location: Location = LocationService.create(request.get_json())
         return location
 
+
+@api.route("/locations/<location_id>")
+@api.param("location_id", "Unique ID for a given Location", _in="query")
+class LocationResource(Resource):
     @responds(schema=LocationSchema)
     def get(self, location_id) -> Location:
         location: Location = LocationService.retrieve(location_id)
         return location
 
 
+@api.route("/locations/connection/<person_id>")
+@api.param("start_date", "Lower bound of date range", _in="query")
+@api.param("end_date", "Upper bound of date range", _in="query")
+@api.param("distance", "Proximity to a given user in meters", _in="query")
+class LocationDataConnectionResource(Resource):
+    @responds(schema=LocationSchema,many=True)
+    def get(self, person_id) -> List(LocationSchema):
+        start_date: datetime = datetime.strptime(
+            request.args["start_date"], DATE_FORMAT
+        )
+        end_date: datetime = datetime.strptime(request.args["end_date"], DATE_FORMAT)
+        distance: Optional[int] = request.args.get("distance", 5)
+
+        results = LocationConnectionService.find_contacts(
+            person_id=person_id,
+            start_date=start_date,
+            end_date=end_date,
+            meters=distance,
+        )
+        return results
