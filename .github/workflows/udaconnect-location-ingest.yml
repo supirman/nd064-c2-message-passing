@@ -5,9 +5,9 @@ name: Udaconnect Location Ingest Service - Package with Docker
 on:
   push:
     branches: [ master ]
-#     # Prevent trigger build by change on other location
-#     paths:
-#       - 'modules/location_ingest/**'
+    # Prevent trigger build by change on other location
+    paths:
+      - 'modules/location_ingest/**'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:

@@ -41,7 +41,7 @@ class LocationResource(Resource):
 @api.param("distance", "Proximity to a given user in meters", _in="query")
 class LocationDataConnectionResource(Resource):
     @responds(schema=LocationSchema,many=True)
-    def get(self, person_id) -> List(LocationSchema):
+    def get(self, person_id) -> List[LocationSchema]:
         start_date: datetime = datetime.strptime(
             request.args["start_date"], DATE_FORMAT
         )
