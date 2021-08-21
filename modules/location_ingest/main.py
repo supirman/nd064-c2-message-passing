@@ -9,17 +9,10 @@ import location_ingest_pb2_grpc
 
 TOPIC_NAME = 'udaconnect-location'
 KAFKA_SERVER = 'udaconnect-kafka-0.udaconnect-kafka-headless.default.svc.cluster.local:9092'
-# KAFKA_SERVER = 'udaconnect-kafka.default.svc.cluster.local:9092'
 
 class LocationIngestServicer(location_ingest_pb2_grpc.LocationIngestServicer):
     def Create(self, request, context):
-        # request_value = {
-        #     "person_id": request.person_id,
-        #     "longitude": request.longitude,
-        #     "latitude": request.latitude,
-        #     "creation_time": request.creation_time
-        # }
-        # print(request_value)
+
         json_value = MessageToJson(request,preserving_proto_field_name=True)
         
         producer = KafkaProducer(bootstrap_servers=KAFKA_SERVER)

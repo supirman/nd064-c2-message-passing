@@ -1,7 +1,5 @@
 syntax = "proto3";
 
-// import "google/protobuf/timestamp.proto";
-
 message LocationIngestMessage {
     int32 person_id = 1;
     string longitude = 2;
