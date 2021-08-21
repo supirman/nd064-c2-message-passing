@@ -1,0 +1,4 @@
+{
+    "CONECTION_ENDPOINT": "http://localhost:30004/api/persons",
+    "PERSON_ENDPOINT": "http://localhost:30003/api/persons"
+}
